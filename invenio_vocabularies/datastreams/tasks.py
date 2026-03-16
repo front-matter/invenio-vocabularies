@@ -9,8 +9,10 @@
 """Data Streams Celery tasks."""
 
 from celery import shared_task
+from flask import current_app
 
 from ..datastreams import StreamEntry
+from ..datastreams.errors import WriterError
 from ..datastreams.factories import WriterFactory
 
 
@@ -22,7 +24,10 @@ def write_entry(writer_config, entry):
     :param entry: dictionary, StreamEntry is not serializable.
     """
     writer = WriterFactory.create(config=writer_config)
-    writer.write(StreamEntry(entry))
+    try:
+        writer.write(StreamEntry(entry))
+    except WriterError as err:
+        current_app.logger.error(f"WriterError in write_entry task: {err}")
 
 
 @shared_task(ignore_result=True)
