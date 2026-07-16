@@ -2,10 +2,19 @@
     SPDX-FileCopyrightText: 2020-2025 CERN.
     SPDX-FileCopyrightText: 2024-2026 Graz University of Technology.
     SPDX-FileCopyrightText: 2026 KTH Royal Institute of Technology.
+    SPDX-FileCopyrightText: 2026 TU Wien.
     SPDX-License-Identifier: MIT
 
 Changes
 =======
+
+Version v14.1.0 (released 2026-07-16)
+
+- fix(datastreams): omit entry payload from skipped-entry logs
+- fix(contrib): adding custom funders
+- chore(setup): migrate from setuptools to hatchling
+- chore(format): reformat with black
+- jobs: configured job for inserting EDMO affiliations
 
 Version v14.0.0 (released 2026-06-18)
 
