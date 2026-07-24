@@ -8,6 +8,19 @@
 Changes
 =======
 
+Version v14.2.0 (released 2026-07-24)
+
+- feat(ror): updated datastream & mappings to include website & domains
+- feat(awards): add grant DOI identifier in cordis datastream
+- feat(awards): add all awards fields in cordis datastream
+- feat(awards): default PIC mapping source to published Zenodo DOI
+- feat(awards): accept name as organizations free-text label
+- feat(awards): resolve CORDIS PICs to ROR ids on import
+- refactor(common): extract DOI signposting helper
+- feat(awards): dereference organizations against affiliations vocabulary
+- feat(awards): add short description in cordis datastream
+- fix(datastreams): OpenAIREHTTPReader allowing to match several tar filenames
+
 Version v14.1.0 (released 2026-07-16)
 
 - fix(datastreams): omit entry payload from skipped-entry logs
